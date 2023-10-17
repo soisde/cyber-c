@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2? family= Poppins & display=swap');
+
+
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+    background-color: rgb(255, 255, 255);
+    width: 10px;
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background-color: #ea10bb;
+}
+
+/* #region dashboard*/
+
+.button{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    border: solid 2px #ea10bb;
+    width: 10%;
+    margin-left: 90%;
+    background-color: #ea10bb;
+}
+
+.dash {
+    display: flex;
+}
+
+.dash nav img {
+    margin: 20px auto;
+    width: 150px;
+}
+
+.dash nav {
+    position: fixed;
+    width: 20%;
+    background: radial-gradient(100% 225% at 100% 0%, #ea10bb 0%, #000000 100%), linear-gradient(236deg, #fdc5f5 0%, #000000 100%), linear-gradient(135deg, #b388eb 0%, #f7aef8 36%, #f7aef8 36%, #b388eb 60%, #8093f1 60%, #5f0a87 67%, #2f004f 67%, #5f0a87 100%);
+    background-blend-mode: overlay, hard-light, normal;
+    color: #f2f2f2;
+    height: 100%;
+    text-align: center;
+    box-shadow: 5px 10px 20px #ea10bb;
+    max-height: 3000px;
+}
+
+.dash ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dash ul li {
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.dash a {
+    border-radius: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #161925;
+    padding: 10px;
+}
+
+.dash a:hover {
+    background-color: #f2f2f2;
+    color: #ea10bb;
+    transition: ease-in-out .3s;
+}
+
+.topo {
+    width: 80%;
+    margin-left: 20%;
+}
+
+.header {
+    width: 100%;
+    background: radial-gradient(100% 225% at 100% 0%, #ea10bb 0%, #5f0a87 100%), linear-gradient(236deg, #fdc5f5 0%, #000000 100%), linear-gradient(135deg, #b388eb 0%, #f7aef8 36%, #f7aef8 36%, #b388eb 60%, #8093f1 60%, #5f0a87 67%, #2f004f 67%, #5f0a87 100%);
+    background-blend-mode: overlay, hard-light, normal;
+    text-align: center;
+    color: #99e0f5;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 15px 5px 30px #ea10bb;
+    height: 150px;
+}
+
+.topo main {
+    width: 95%;
+    margin: 30px 2.5%;
+    text-align: justify;
+
+}
+
+.topo img {
+    margin: 20px 0;
+}
+
+/* #endregion dashboard*/
+
+/* #region  tabela*/
+
+table,
+caption,
+td {
+    border: solid 3px #ea10bb;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+thead {
+    background-image: none;
+    background:linear-gradient(220deg, #800eb6 0%, #8093f1 50%, #800eb6 100%); 
+    color: #f2f2f2;
+}
+
+caption {
+    color: #000000;
+    margin: 30px 0;
+    padding: 15px;
+    font-size: 35px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    background:linear-gradient(180deg, #fdc5f5 0%, #8093f1 50%, #fdc5f5 100%);
+    text-align: center;
+    color: #161925;
+}
+
+td:nth-child(1) {
+    padding: 0 20px;
+}
+
+td {
+    padding: 15px 20px;
+}
+
+th {
+    padding: 15px 20px;
+}
+
+.atualizar {
+    color: #0bf90b !important;
+    background-color: #333 !important;
+    border: solid 2px #0bf90b !important;
+}
+
+.desativar {
+    color: #ff1900 !important;
+    background-color: #f2f2f2 !important;
+    border: solid 2px #ff1900 !important;
+}
+
+.atualizar:hover {
+    background-color: #0bf90b !important;
+    color: #333 !important; 
+}
+
+.desativar:hover {
+    background-color: #ff1900 !important;
+    color: white !important;
+}
+
+/* #endregion  tabela */
