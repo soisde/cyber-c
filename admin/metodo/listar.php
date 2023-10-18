@@ -11,7 +11,7 @@ $listar = $listaMetodo->ListarMetodo();
 <div>
 
 
-<td><a class="button" href="index.php?p=servico&s=inserir">INSERIR</a></td>
+<td><a class="button" href="index.php?p=metodo&m=inserir">INSERIR</a></td>
     
     <table>
         <thead>
@@ -33,8 +33,8 @@ $listar = $listaMetodo->ListarMetodo();
                 <td><?php echo $linha['tituloMetodo'] ?></td>
                 <td><?php echo $linha['textoMetodo'] ?></td>
                 <td><?php echo $linha['statusMetodo'] ?></td>
-                <td><a href="index.php?p=metodo&s=atualizar" class="atualizar">ATUALIZAR</a></td>
-                <td><a href="index.php?p=metodo&s=desativar" class="desativar">DESATIVAR</a></td>
+                <td><a href="index.php?p=metodo&s=atualizar&id=<?php echo $linha['idMetodo']?>" class="atualizar">ATUALIZAR</a></td>
+                <td><a href="index.php?p=metodo&s=desativar&id=<?php echo $linha['idMetodo']?>" class="desativar">DESATIVAR</a></td>
             </tr>
             <?php endforeach ?>
         </tbody>

@@ -1,18 +1,22 @@
 
 <?php 
-/* require_once('admin/class/servico.php');
-$listaServico = new ProjetosClass ();
-$listar = $listaServico->Listar();
-var_dump($listar); */
-?>
 
-<?php 
 require_once('admin/class/metodo.php');
 
 $listaMetodo = new MetodosClass ();
-$listar = $listaMetodo->Listar();
+$listar = $listaMetodo->ListarMetodo();
 //var_dump($listar);
+
+require_once('admin/class/entrega.php');
+
+$listaEntrega = new EntregaClass ();
+$listar = $listaEntrega->ListarEntraga();
+
+
+
 ?>
+
+
 
 
 

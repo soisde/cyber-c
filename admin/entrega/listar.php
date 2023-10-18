@@ -1,7 +1,7 @@
 <?php
 require_once('class/entrega.php');
 
-$listaEntrega = new entregaClass();
+$listaEntrega = new EntregaClass();
 $lista = $listaEntrega->ListarEntraga();
 ?>
 
@@ -32,12 +32,12 @@ $lista = $listaEntrega->ListarEntraga();
 
                 <tr>
                     <td><?php echo $linha['idEntrega'] ?></td>
-                    <td><?php echo '<img src="../img/' . $linha['imgEntrega'] . '"alt="' . $linha['descricaoImgEntrega'] . '">' ?></td>  
+                    <td><?php echo '<img src="../img/' . $linha['imgEntrega'] . '"alt="' . $linha['descricaoImgEntrega'] . '">'?></td>  
                     <td><?php echo $linha['tituloEntrega'] ?></td>
                     <td><?php echo $linha['textoEntrega'] ?></td>
                     <td><?php echo $linha['statusEntrega'] ?></td>
-                    <td><a href="index.php?p=entrega&e=atualizar" class="atualizar">ATUALIZAR</a></td>
-                    <td><a href="index.php?p=entrega&e=desativar" class="desativar">DESATIVAR</a></td>
+                    <td><a href="index.php?p=entrega&e=atualizar&id=<?php echo $linha['idEntrega']?>" class="atualizar">ATUALIZAR</a></td>
+                    <td><a href="index.php?p=entrega&e=desativar&id=<?php echo $linha['idEntrega']?>" class="desativar">DESATIVAR</a></td>
                 </tr>
 
             <?php endforeach ?>

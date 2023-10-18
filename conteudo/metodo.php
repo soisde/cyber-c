@@ -7,7 +7,7 @@
           <div class="content">
            <h3 class="heading"> <?php echo $linha ['tituloMetodo']?> </h3> 
             <p class="para">
-            <?php echo $linha ['textometodo'] ?>
+            <?php echo $linha ['textoMetodo'] ?>
             </p>
           </div>
         </div>

@@ -27,12 +27,12 @@ public $imgMetodo;
     }
 
     public function Inserir(){
-        $query = "INSERT INTO tblmetodo (tituloMetodo, textometodo, statusMetodo, linkMetodo, imgmetodo) VALUES ('".$this->tituloMetodo."',
+        $query = "INSERT INTO tblmetodo (tituloMetodo, textoMetodo, statusMetodo, linkMetodo, imgMetodo) VALUES ('".$this->tituloMetodo."',
         '".$this->textoMetodo."', '".$this->statusMetodo."', '".$this->linkMetodo."', '".$this->imgMetodo."');";
         
         $conn = Conexao:: LigarConexao();
         $conn->exec($query);
-        echo " <script> document.location='index.php?p=metodo&s=inserir'</script>";
+        echo " <script> document.location='index.php?p=metodo&m=inserir'</script>";
 
     }
 }

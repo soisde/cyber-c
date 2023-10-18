@@ -4,11 +4,14 @@ if(isset($_POST['tituloEntrega'])){
 
   require_once('class/entrega.php');
 
-  $tituloMetodo       = $_POST['tituloEntrega'];
-  $subTituloMetodo    = $_POST['subTituloEntrega'];
-  $textometodo        = $_POST['textoEntrega']; 
-  $statusmetodos      = $_POST['statusEntrega'];
+  $tituloEntrega      = $_POST['tituloEntrega'];
+  $subTituloEntrega   = $_POST['subTituloEntrega'];
+  $textoEntrega       = $_POST['textoEntrega']; 
+  $statusEntrega      = $_POST['statusEntrega'];
 
+
+
+  if(!empty($_FILES['imgEntrega']['name'])){   
   $arquivo            = $_FILES['imgEntrega'];
 
   if($arquivo['error']){
@@ -20,7 +23,11 @@ if(isset($_POST['tituloEntrega'])){
   }else{throw new Exception('Error: Não foi possível realizar o Upload da img');
   }
 
-  $entrega = new entregaClass();
+  }else{
+    $imgEntrega = $entrega->imgEntrega;
+  }
+
+  $entrega = new EntregaClass();
 
   $entrega ->tituloEntrega        = $tituloEntrega;
   $entrega ->subTituloEntrega     = $subTituloEntrega;
@@ -48,8 +55,8 @@ if(isset($_POST['tituloEntrega'])){
 
             <div class="img">
 
-                <img src="img/camera.jpg" alt="imagem" id="imagemExibida" name="imgEntrega">
-                <input type="file" name="imgServico" id="inputImagem" class="btnimg" >
+                <img src="img/camera.jpg" alt="imagem" id="imgEntrega" name="imgEntrega">
+                <input type="file" name="imgEntrega" id="inputImagem" class="btnimg" >
 
             </div>
 
@@ -57,7 +64,7 @@ if(isset($_POST['tituloEntrega'])){
             <div class="input">
 
                 <label for="titulo">Título:</label>
-                <input type="text" name="tituloEntrega" id="subTituloEntrega" required>
+                <input type="text" name="tituloEntrega" id="tituloEntrega" required>
 
                 <label for="linkServico">Sub-título: </label>
                 <input type="text" name="subTituloEntrega" id="subTituloEntrega" required>
@@ -80,13 +87,13 @@ if(isset($_POST['tituloEntrega'])){
 </section>
 
  <script>
-    document.getElementById('imagemExibida').addEventListener('click', function(){
+    document.getElementById('imgEntrega').addEventListener('click', function(){
       document.getElementById('inputImagem').click();
 
     });
 
     document.getElementById('inputImagem').addEventListener('change', function(event){
-   let imagemExibida = document.getElementById('imagemExibida');
+   let imagemExibida = document.getElementById('imgEntrega');
    let arquivo = event.target.files[0];
 
    if(arquivo){

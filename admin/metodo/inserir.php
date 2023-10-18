@@ -1,11 +1,11 @@
-<?php
+M<?php
 
 if (isset($_POST['tituloMetodo'])) {
 
   require_once('class/metodo.php');
   $tituloMetodo   = $_POST['tituloMetodo'];
-  $textometodo   = $_POST['textometodo'];
-  $statusmetodos  = $_POST['statusmetodos'];
+  $textoMetodo   = $_POST['textoMetodo'];
+  $statusMetodo  = $_POST['statusMetodo'];
   $linkMetodo    = $_POST['linkMetodo'];
 
   $arquivo = $_FILES['imgMetodo'];
@@ -22,8 +22,8 @@ if (isset($_POST['tituloMetodo'])) {
 
   $metodo = new MetodosClass();
   $metodo->tituloMetodo  = $tituloMetodo;
-  $metodo->textometodo = $textometodo;
-  $metodo->statusmetodos = $statusmetodos;
+  $metodo->textoMetodo = $textoMetodo;
+  $metodo->statusMetodo = $statusMetodos;
   $metodo->linkMetodo = $linkMetodo;
 
   $metodo->Inserir();
@@ -31,41 +31,48 @@ if (isset($_POST['tituloMetodo'])) {
 
 
 ?>
-<form action="index.php?p=metodo&s=inserir" method="POST" enctype="multipart/form-data">
-  <section class="formInserir">
-    <div class="conteiner">
-      <div class="mb-3">
+<section class="section">
 
-        <label for="exampleFormControlInput1" class="form-label"></label>
-        <input required type="text" class="form-control" id="exampleFormControlInput1" placeholder="Titulo">
-        <select required class="form-select" aria-label="Default select example">
-          <option selected>Status</option>
-          <option value="1">Ativo</option>
-          <option value="2">Inativo</option>
-          <option value="3">Desativado</option>
-        </select>
+<form action="index.php?p=metodo&m=inserir" method="post" enctype="multipart/form-data">
 
-      </div>
-      <div class="mb-2">
-        <label for="exampleFormControlTextarea1" class="form-label"></label>
-        <textarea required class="form-control" placeholder="Texto" id="exampleFormControlTextarea1" rows="3"></textarea>
-        <input type="link" class="form-control" id="exampleFormControlInput1" placeholder="Link">
+    <h2>Cadastre Novos Metosdos</h2>
 
-      </div>
+    <span></span>
+
+    <div class="form">
+
+        <div class="img">
+
+            <img src="img/camera.jpg" alt="imagem" id="imgMetodo" name="imgMetodo">
+            <input type="file" name="imgMetodo" id="inputImagem" class="btnimg" >
+
+        </div>
+
+
+        <div class="input">
+
+            <label for="titulo">Título:</label>
+            <input type="text" name="tituloMetodo" id="tituloMetodo" required>
+
+            <label for="linkServico">Sub-título: </label>
+            <input type="text" name="subTituloMetodo" id="subTituloMetodo" required>
+
+            <label for="texto">Texto:</label>
+            <textarea name="textoMetodo" id="textoMetodo" cols="30" rows="10" required></textarea>
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="statusMetodo" name="statusMetodo" style="width:30px; margin-right: 10px;" value="ATIVO">
+                <label class="form-check-label checkbox" for="autoSizingCheck" >ATIVO</label>
+            </div>
+
+            <input class="btn" type="submit" value="Inserir">
+
+        </div>
+
     </div>
-
-
-    <button type="submit" class="btn btn-outline-light">Inserir</button>
-
-    <div class="imgbtn">
-      <label required for="imagem"></label>
-      <img src="img\211677_image_icon.png" alt="Imagem" class="img-fluid" id="imagemExibida">
-      <input type="file" id="inputImagem" style="display: none;">
-
-    </div>
-  </section>
 
 </form>
+
+</section>
 
 <script>
   document.getElementById('imagemExibida').addEventListener('click', function() {

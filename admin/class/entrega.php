@@ -2,7 +2,7 @@
 
 require_once('conexao.php');
 
-class entregaClass
+class EntregaClass
 {
     // ATRIBUTOS
 
@@ -26,12 +26,12 @@ class entregaClass
     public function ListarEntraga()
     {
 
-        $query = "SELECT * FROM tblentrega WHERE statusentrega= 'ATIVO' ORDER BY idEntrega ASC";
+        $query = "SELECT * FROM tblentrega WHERE statusEntrega= 'ATIVO' ORDER BY idEntrega ASC";
 
         $conn = Conexao::LigarConexao();
         $resultado = $conn->query($query);
-        $lista = $resultado->fetchAll();
-        return $lista;
+        $listaEntrega = $resultado->fetchAll();
+        return $listaEntrega;
     }
 
     public function Inserir(){
@@ -52,7 +52,7 @@ class entregaClass
 
         $conn = Conexao::LigarConexao();
         $conn->exec($query);
-        echo "<script>document.location='index.php?p=entrega&e=inserir'</script>";
+        echo "<script>document.location='index.php?p=entrega'</script>";
     }
 
     public function Carregar(){
@@ -74,7 +74,7 @@ class entregaClass
  
 public function Atualizar(){
 
-    $query = "UPDATE tblservico SET
+    $query = "UPDATE tblentrega SET
 
                 imgEntrega  = '".$this -> imgEntrega."',
                 tituloEntrega     = '".$this -> tituloEntrega."',
@@ -91,4 +91,14 @@ public function Atualizar(){
 
 }
 
+public function Desativar(){
+    $query = "UPDATE tblentrega SET 
+    statusEntrega  = 'DESATIVADO'
+    WHERE tblentrega.idEntrega = ". $this->idEntrega;
+
+     $conn = Conexao::LigarConexao();
+     $conn->exec($query);
+     echo "<script> document.location='index.php?p=entrega'</script>";
+
+}
 }
