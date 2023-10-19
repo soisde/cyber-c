@@ -26,7 +26,7 @@ class EntregaClass
     public function ListarEntraga()
     {
 
-        $query = "SELECT * FROM tblentrega WHERE statusEntrega= 'ATIVO' ORDER BY idEntrega ASC";
+        $query = "SELECT * FROM tblentrega WHERE statusEntrega= 'ATIVO'";
 
         $conn = Conexao::LigarConexao();
         $resultado = $conn->query($query);
@@ -36,19 +36,14 @@ class EntregaClass
 
     public function Inserir(){
         $query = "INSERT INTO tblentrega(
-                imgEntrega, 
-                tituloEntrega, 
                 subTituloEntrega, 
                 textoEntrega, 
                 statusEntrega) 
 
         VALUES (
-            '" . $this->imgEntrega . "',
-            '" . $this->tituloEntrega . "',
             '" . $this->subTituloEntrega . "',
             '" . $this->textoEntrega . "',
-            '" . $this->statusEntrega . "'
-            )";
+            '" . $this->statusEntrega . "')";
 
         $conn = Conexao::LigarConexao();
         $conn->exec($query);
@@ -63,8 +58,6 @@ class EntregaClass
 
         foreach($listaEntrega as $linha){
 
-            $this->tituloEntrega                = $linha['tituloEntrega'];
-            $this->imgEntrega                  = $linha['imgEntrega'];
             $this->subTituloEntrega             = $linha['subTituloEntrega'];
             $this->textoEntrega                 = $linha['textoEntrega'];
             $this->statusEntrega                = $linha['statusEntrega'];
@@ -76,13 +69,10 @@ public function Atualizar(){
 
     $query = "UPDATE tblentrega SET
 
-                imgEntrega  = '".$this -> imgEntrega."',
-                tituloEntrega     = '".$this -> tituloEntrega."',
-                subTituloEntrega   = '".$this -> subTituloEntrega."',
-                textoEntrega    = '".$this -> textoEntrega."',
-                statusEntrega    = '".$this -> statusEntrega."',
-
-                WHERE tblentrega.idEntrega = " . $this -> idEntrega;
+                subTituloEntrega   = '".$this->subTituloEntrega."',
+                textoEntrega    = '".$this->textoEntrega."',
+                statusEntrega    = '".$this->statusEntrega."'
+                WHERE idEntrega = " .$this->idEntrega;
 
             $conn = Conexao::LigarConexao();
             $conn->exec($query);
@@ -94,11 +84,11 @@ public function Atualizar(){
 public function Desativar(){
     $query = "UPDATE tblentrega SET 
     statusEntrega  = 'DESATIVADO'
-    WHERE tblentrega.idEntrega = ". $this->idEntrega;
+    WHERE idEntrega = ". $this->idEntrega;
 
      $conn = Conexao::LigarConexao();
      $conn->exec($query);
-     echo "<script> document.location='index.php?p=entrega'</script>";
+     echo "<script>document.location='index.php?p=entrega'</script>";
 
 }
 }

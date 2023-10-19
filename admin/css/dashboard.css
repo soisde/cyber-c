@@ -1,6 +1,24 @@
 @import url('https://fonts.googleapis.com/css2? family= Poppins & display=swap');
 
-
+:root {
+    --cor-1: #0b3961;
+    --cor-2: #36393b;
+    --cor-3: #fefffe;
+    --cor-4: #000000;
+    --cor-5: #171717;
+    --cor-6: #d6e9ff;
+    --cor-7: #00296b;
+    --cor-8: #ffd500;
+    --cor-9: #fdc5f5;
+    --cor-10: #f7aef8;
+    --cor-11: #b388eb;
+    --cor-12: #8093f1;
+    --cor-13: #72ddf7;
+    --cor-14: #5f0a87;
+    --cor-15: #2f004f;
+    --font-1: 'Syne', sans-serif;
+    --font-2: 'Quicksand', sans-serif;
+  }
 
 body {
     margin: 0 auto;
@@ -26,10 +44,10 @@ body {
     display: flex;
     justify-content: center;
     margin: 20px;
-    border: solid 2px #ea10bb;
+    border: solid 2px #ac10ea;
     width: 10%;
     margin-left: 90%;
-    background-color: #ea10bb;
+    background-color: #ac10eaab;
 }
 
 .dash {
@@ -44,12 +62,12 @@ body {
 .dash nav {
     position: fixed;
     width: 20%;
-    background: radial-gradient(100% 225% at 100% 0%, #ea10bb 0%, #000000 100%), linear-gradient(236deg, #fdc5f5 0%, #000000 100%), linear-gradient(135deg, #b388eb 0%, #f7aef8 36%, #f7aef8 36%, #b388eb 60%, #8093f1 60%, #5f0a87 67%, #2f004f 67%, #5f0a87 100%);
+    background: radial-gradient(100% 225% at 100% 0%,  #9a01ffcc 0%, #00000054 100%), linear-gradient(236deg, #9605da 0%, #00000085 100%), linear-gradient(135deg, #570370bd 0%,  #9519dd 36%,  #a166eee8 36%, #b700ff 60%, #f7aef8 60%, #d83becb9 67%, #450570 67%, #9111cc 100%);
     background-blend-mode: overlay, hard-light, normal;
     color: #f2f2f2;
     height: 100%;
     text-align: center;
-    box-shadow: 5px 10px 20px #ea10bb;
+    box-shadow: 5px 10px 20px #970df3b6;
     max-height: 3000px;
 }
 
@@ -86,13 +104,13 @@ body {
 
 .header {
     width: 100%;
-    background: radial-gradient(100% 225% at 100% 0%, #ea10bb 0%, #5f0a87 100%), linear-gradient(236deg, #fdc5f5 0%, #000000 100%), linear-gradient(135deg, #b388eb 0%, #f7aef8 36%, #f7aef8 36%, #b388eb 60%, #8093f1 60%, #5f0a87 67%, #2f004f 67%, #5f0a87 100%);
+    background: radial-gradient(100% 225% at 100% 0%,  #9a01ffcc 0%, #00000054 100%), linear-gradient(236deg, #9605da 0%, #00000085 100%), linear-gradient(135deg, #570370bd 0%,  #9519dd 36%,  #a166eee8 36%, #b700ff 60%, #f7aef8 60%, #d83becb9 67%, #450570 67%, #9111cc 100%);
     background-blend-mode: overlay, hard-light, normal;
     text-align: center;
     color: #99e0f5;
     font-size: 18px;
     font-weight: bold;
-    box-shadow: 15px 5px 30px #ea10bb;
+    box-shadow: 15px 5px 30px var(--cor-13);
     height: 150px;
 }
 

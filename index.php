@@ -9,8 +9,8 @@ $listar = $listaMetodo->ListarMetodo();
 
 require_once('admin/class/entrega.php');
 
-$listaEntrega = new EntregaClass ();
-$listar = $listaEntrega->ListarEntraga();
+$ListaEntrega = new EntregaClass ();
+$listaEntrega = $ListaEntrega->ListarEntraga();
 
 
 
