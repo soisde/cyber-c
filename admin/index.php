@@ -63,7 +63,7 @@
                 //         require_once('planilha/servico.php');
                 //     }
                 // }
-    
+
                 switch ($pagina) {
                         case 'metodo':
                           require_once('metodo/metodo.php');

@@ -9,10 +9,13 @@ $listar = $listaMetodo->ListarMetodo();
 
 require_once('admin/class/entrega.php');
 
-$listaEntrega = new EntregaClass ();
-$listar = $listaEntrega->ListarEntraga();
+$ListaEntrega = new EntregaClass ();
+$listaEntrega = $ListaEntrega->ListarEntraga();
 
+require_once('admin/Class/solucoes.php');
 
+$ListaSolucoes = new SolucoesClass();
+$ListaSolucoes = $ListaSolucoes->ListarSolucoes();
 
 ?>
 

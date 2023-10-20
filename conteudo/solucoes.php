@@ -1,4 +1,4 @@
-<!-- Serviços -->
+<!-- Soluçoes -->
     <section class="solucoes" id="solu">
 
       <div class=" solu site" data-aos="zoom-in-right">
