@@ -1,3 +1,18 @@
+<?php 
+
+session_start();
+
+if(!isset($_SESSION['login'])) {
+header('Location:login.php');
+}
+require_once('class/usuario.php');
+
+$usuario = new Login();
+$usuario->idUsuario = $_SESSION['idUser'];
+$usuario->VerificarLogin();
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -63,7 +78,7 @@
                 //         require_once('planilha/servico.php');
                 //     }
                 // }
-    
+
                 switch ($pagina) {
                         case 'metodo':
                           require_once('metodo/metodo.php');

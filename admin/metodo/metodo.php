@@ -1,5 +1,5 @@
 <?php 
-$pagina = @$_GET['s'];
+$pagina = @$_GET['m'];
 
 
 if($pagina == NULL){

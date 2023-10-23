@@ -1,8 +1,6 @@
  <!-- Projetos -->
     <section id="projetos">
 
-<?php // foreach( array_slice($listar, 0, 3) as $linha): ?>
-<?php //echo $listar ['tituloProjetos']?>
 
 <h2 class="project"> Projetos </h2>
         <div class="projetos-itens">
@@ -49,7 +47,7 @@
 
 
          
-<?php /* endforeach; */?>
+
 
 
 
