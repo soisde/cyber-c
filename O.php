@@ -1,3 +1,33 @@
+
+<?php 
+
+require_once('admin/class/metodo.php');
+
+$listaMetodo = new MetodosClass ();
+$listar = $listaMetodo->ListarMetodo();
+//var_dump($listar);
+
+require_once('admin/class/entrega.php');
+
+$ListaEntrega = new EntregaClass ();
+$listaEntrega = $ListaEntrega->ListarEntraga();
+
+require_once('admin/class/solucoes.php');
+$ListaSolucoes = new SolucoesClass();
+$ListaSolucoes = $ListaSolucoes->ListarSolucoes();
+
+
+require_once('admin/Class/usuario.php');
+
+$ListaUsuario = new UsuarioClass();
+$listaUsuario = $ListaUsuario->ListarUsuario();
+
+
+?>
+
+
+
+
 <?php
 
 //Import PHPMailer classes into the global namespace
