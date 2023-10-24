@@ -5,10 +5,17 @@ session_start();
 if(!isset($_SESSION['login'])) {
 header('Location:login.php');
 }
+<<<<<<< HEAD
 require_once('class/login.php');
 
 $usuario = new Login();
 $usuario->idUsuario = $_SESSION['idUsuario'];
+=======
+require_once('class/usuario.php');
+
+$usuario = new Login();
+$usuario->idUsuario = $_SESSION['idUser'];
+>>>>>>> 8c763046dc35be026ff6ddeb8cbeac9aee3f10c3
 $usuario->VerificarLogin();
 ?>
 

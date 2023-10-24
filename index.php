@@ -13,6 +13,7 @@ $ListaEntrega = new EntregaClass ();
 $listaEntrega = $ListaEntrega->ListarEntraga();
 
 require_once('admin/Class/solucoes.php');
+<<<<<<< HEAD
 
 $ListaSolucoes = new SolucoesClass();
 $ListaSolucoes = $ListaSolucoes->ListarSolucoes();
@@ -21,7 +22,11 @@ require_once('admin/Class/usuario.php');
 
 $ListaUsuario = new UsuarioClass();
 $listaUsuario = $ListaUsuario->ListarUsuario();
+=======
+>>>>>>> 8c763046dc35be026ff6ddeb8cbeac9aee3f10c3
 
+$ListaSolucoes = new SolucoesClass();
+$ListaSolucoes = $ListaSolucoes->ListarSolucoes();
 
 ?>
 
