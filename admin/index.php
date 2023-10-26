@@ -1,3 +1,18 @@
+<?php 
+
+session_start();
+
+if(!isset($_SESSION['login'])) {
+header('Location:login.php');
+}
+require_once('class/login.php');
+
+$usuario = new Login();
+$usuario->idUsuario = $_SESSION['idUsuario'];
+$usuario->VerificarLogin();
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -33,6 +48,9 @@
                 <hr>
                 <li><a href="index.php?p=faq">FAQ</a></li>
                 <hr>
+                <li><a href="index.php?p=usuario">Usuario</a></li>
+                <hr>
+
             </ul>
 
         </nav>
@@ -63,7 +81,7 @@
                 //         require_once('planilha/servico.php');
                 //     }
                 // }
-    
+
                 switch ($pagina) {
                         case 'metodo':
                           require_once('metodo/metodo.php');
@@ -84,6 +102,10 @@
                                 case 'faq':
                                   require_once('faq/faq.php');
                                   break;
+
+                                  case 'usuario':
+                                    require_once('usuario/usuario.php');
+                                    break;
                     
                     default:
                         # code...

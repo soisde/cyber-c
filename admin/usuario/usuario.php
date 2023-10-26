@@ -1,5 +1,5 @@
 <?php 
-$pagina = @$_GET['s'];
+$pagina = @$_GET['u'];
 
 
 if($pagina == NULL){
@@ -9,3 +9,4 @@ if($pagina == NULL){
     if($pagina == 'atualizar'){require_once('atualizar.php');}
     if($pagina == 'desativar'){require_once('desativar.php');}
 }
+
