@@ -63,7 +63,11 @@ if(isset($_POST['nomeUsuario'])){
 
 
             <label for="linkServico">Nome: </label>
+<<<<<<< HEAD
                 <input type="text" name="nomeUsuario" id="nomeUsuario" required>
+=======
+                <input type="text" name="nomeUsuario " id="nomeUsuario  " required>
+>>>>>>> 539a96932d4ccd59691abb140a3082b48f69d7ae
 
                 <div class="col-sm-4">
                         <div>
@@ -73,6 +77,7 @@ if(isset($_POST['nomeUsuario'])){
                         </div>
                     </div>
 
+<<<<<<< HEAD
                 <label>Email: </label>
                 <input type="text" name="emailUsuario" id="emailUsuario" required>
 
@@ -81,6 +86,13 @@ if(isset($_POST['nomeUsuario'])){
 
                 <label>Telefone: </label>
                 <input type="text" name="foneUsuario" id="foneUsuario" required>
+=======
+                <label for="linkServico">Email: </label>
+                <input type="text" name="emailUsuario " id="emailUsuario  " required>
+
+                <label for="linkServico">Telefone: </label>
+                <input type="text" name="foneUsuario " id="foneUsuario  " required>
+>>>>>>> 539a96932d4ccd59691abb140a3082b48f69d7ae
 
                 <div class="form-check mb-2">
                     <input class="form-check-input" type="checkbox" id="statusUsuario" name="statusUsuario" style="width:30px; margin-right: 10px;" value="ATIVO">

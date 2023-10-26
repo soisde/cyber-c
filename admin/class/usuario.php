@@ -76,7 +76,11 @@ class UsuarioClass
 
         $conn = Conexao::LigarConexao();
         $conn->exec($query);
+<<<<<<< HEAD
         echo "<script>document.location='index.php?p=usuario'</script>";
+=======
+        echo "<script>document.location='index.php?p=Usuario'</script>";
+>>>>>>> 539a96932d4ccd59691abb140a3082b48f69d7ae
     }
 
 
@@ -91,22 +95,38 @@ class UsuarioClass
           senhaUsuario = '".$this->senhaUsuario."',
           statusUsuario  = '".$this->statusUsuario."'
 
+<<<<<<< HEAD
             WHERE idUsuario = ".$this->idUsuario;
+=======
+            WHERE idUsuario = " . $this->idUsuario;
+>>>>>>> 539a96932d4ccd59691abb140a3082b48f69d7ae
 
         $conn = Conexao::LigarConexao();
         $conn->exec($query);
 
+<<<<<<< HEAD
         echo "<script>document.location='index.php?p=usuario'</script>";
+=======
+        echo "<script>document.location='index.php?p=Usuario'</script>";
+>>>>>>> 539a96932d4ccd59691abb140a3082b48f69d7ae
     }
 
     public function Desativar()
     {
         $query = "UPDATE tblusuario SET 
     statusUsuario  = 'DESATIVADO'
+<<<<<<< HEAD
     WHERE idUsuario = ".$this->idUsuario;
 
         $conn = Conexao::LigarConexao();
         $conn->exec($query);
         echo "<script>document.location='index.php?p=usuario'</script>";
+=======
+    WHERE idUsuario = " . $this->idUsuario;
+
+        $conn = Conexao::LigarConexao();
+        $conn->exec($query);
+        echo "<script>document.location='index.php?p=Usuario'</script>";
+>>>>>>> 539a96932d4ccd59691abb140a3082b48f69d7ae
     }
 }

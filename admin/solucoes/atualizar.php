@@ -23,7 +23,11 @@ if (isset($_POST['subTituloSolucoes'])) {
 
 <section class="section">
 
+<<<<<<< HEAD
     <form action="index.php?p=solucoes&s=atualizar&id=<?php echo $solucoes -> idSolucoes ?>" method="post" enctype="multipart/form-data">
+=======
+    <form action="index.php?p=solucoes&e=atualizar&id=<?php echo $solucoes -> idSolucoes ?>" method="post" enctype="multipart/form-data">
+>>>>>>> 539a96932d4ccd59691abb140a3082b48f69d7ae
 
         <h2>Cadastre Novas Solucoess</h2>
 

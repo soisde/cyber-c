@@ -6,8 +6,23 @@
         <div>
         <?php foreach($ListaSolucoes as $linha) : ?>
           <div data-aos="fade-up">
+<<<<<<< HEAD
             <h3><i class="fa-solid fa-pen-to-square" style="color:  #000000;"><i><?php echo $linha['subTituloSolucoes']?></h3>
             <p><?php echo $linha['textoSolucoes']?>.</p>
+=======
+            <h3><i class="fa-solid fa-pen-to-square" style="color:  #000000;"><i>AnúnciosDigitais</h3>
+            <p> Alcance seu público-alvo com anúncios personalizados e estratégias de remarketing.</p>
+            <a href="#"></a>
+          </div>
+          <div data-aos="fade-down">
+            <h3><i class="fa-solid fa-file" style="color:  #000000;"></i> Branding</h3>
+            <p>Crie uma marca forte e única para sua empresa, com identidade visual e comunicação.</p>
+            <a href="#"></a>
+          </div>
+          <div data-aos="fade-up">
+            <h3><i class="fa-solid fa-pen-nib" style="color:  #000000;"></i>CRO</h3>
+            <p>Otimize seu site para aumentar conversões e maximizar resultados de marketing digital. </p>
+>>>>>>> 539a96932d4ccd59691abb140a3082b48f69d7ae
             <a href="#"></a>
           </div>
           <?php endforeach; ?>
