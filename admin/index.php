@@ -5,11 +5,31 @@ session_start();
 if(!isset($_SESSION['login'])) {
 header('Location:login.php');
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 539a96932d4ccd59691abb140a3082b48f69d7ae
+>>>>>>> 22aaec47541840dbacfceae7dc4152489de27b29
 require_once('class/login.php');
 
 $usuario = new Login();
 $usuario->idUsuario = $_SESSION['idUsuario'];
+<<<<<<< HEAD
 $dadosUsuario = $usuario->VerificarLogin();
+=======
+<<<<<<< HEAD
+=======
+=======
+require_once('class/usuario.php');
+
+$usuario = new Login();
+$usuario->idUsuario = $_SESSION['idUser'];
+>>>>>>> 8c763046dc35be026ff6ddeb8cbeac9aee3f10c3
+>>>>>>> 539a96932d4ccd59691abb140a3082b48f69d7ae
+$usuario->VerificarLogin();
+>>>>>>> 22aaec47541840dbacfceae7dc4152489de27b29
 ?>
 
 

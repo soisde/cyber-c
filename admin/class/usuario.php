@@ -55,6 +55,7 @@ class UsuarioClass
         $listaUsuario = $resultado->fetchAll();
         return $listaUsuario;
     }
+<<<<<<< HEAD
     public function ListarUsuarioDesativado()
     {
 
@@ -65,6 +66,8 @@ class UsuarioClass
         $listaUsuario = $resultado->fetchAll();
         return $listaUsuario;
     }
+=======
+>>>>>>> 22aaec47541840dbacfceae7dc4152489de27b29
 
     public function Inserir()
     {
@@ -86,7 +89,15 @@ class UsuarioClass
 
         $conn = Conexao::LigarConexao();
         $conn->exec($query);
+<<<<<<< HEAD
         echo "<script>document.location='index.php?p=usuario'</script>";
+=======
+<<<<<<< HEAD
+        echo "<script>document.location='index.php?p=usuario'</script>";
+=======
+        echo "<script>document.location='index.php?p=Usuario'</script>";
+>>>>>>> 539a96932d4ccd59691abb140a3082b48f69d7ae
+>>>>>>> 22aaec47541840dbacfceae7dc4152489de27b29
     }
 
 
@@ -101,23 +112,44 @@ class UsuarioClass
           senhaUsuario = '".$this->senhaUsuario."',
           statusUsuario  = '".$this->statusUsuario."'
 
+<<<<<<< HEAD
             WHERE idUsuario = ".$this->idUsuario;
+=======
+<<<<<<< HEAD
+            WHERE idUsuario = ".$this->idUsuario;
+=======
+            WHERE idUsuario = " . $this->idUsuario;
+>>>>>>> 539a96932d4ccd59691abb140a3082b48f69d7ae
+>>>>>>> 22aaec47541840dbacfceae7dc4152489de27b29
 
         $conn = Conexao::LigarConexao();
         $conn->exec($query);
 
+<<<<<<< HEAD
         echo "<script>document.location='index.php?p=usuario'</script>";
+=======
+<<<<<<< HEAD
+        echo "<script>document.location='index.php?p=usuario'</script>";
+=======
+        echo "<script>document.location='index.php?p=Usuario'</script>";
+>>>>>>> 539a96932d4ccd59691abb140a3082b48f69d7ae
+>>>>>>> 22aaec47541840dbacfceae7dc4152489de27b29
     }
 
     public function Desativar()
     {
         $query = "UPDATE tblusuario SET 
     statusUsuario  = 'DESATIVADO'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 22aaec47541840dbacfceae7dc4152489de27b29
     WHERE idUsuario = ".$this->idUsuario;
 
         $conn = Conexao::LigarConexao();
         $conn->exec($query);
         echo "<script>document.location='index.php?p=usuario'</script>";
+<<<<<<< HEAD
     }
 
 
@@ -130,5 +162,14 @@ class UsuarioClass
         $conn = Conexao::LigarConexao();
         $conn->exec($query);
         echo "<script>document.location='index.php?p=usuario'</script>";
+=======
+=======
+    WHERE idUsuario = " . $this->idUsuario;
+
+        $conn = Conexao::LigarConexao();
+        $conn->exec($query);
+        echo "<script>document.location='index.php?p=Usuario'</script>";
+>>>>>>> 539a96932d4ccd59691abb140a3082b48f69d7ae
+>>>>>>> 22aaec47541840dbacfceae7dc4152489de27b29
     }
 }

@@ -16,6 +16,13 @@ require_once('admin/class/solucoes.php');
 $ListaSolucoes = new SolucoesClass();
 $ListaSolucoes = $ListaSolucoes->ListarSolucoes();
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 539a96932d4ccd59691abb140a3082b48f69d7ae
+>>>>>>> 22aaec47541840dbacfceae7dc4152489de27b29
 
 require_once('admin/Class/usuario.php');
 
@@ -23,6 +30,14 @@ $ListaUsuario = new UsuarioClass();
 $listaUsuario = $ListaUsuario->ListarUsuario();
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8c763046dc35be026ff6ddeb8cbeac9aee3f10c3
+>>>>>>> 539a96932d4ccd59691abb140a3082b48f69d7ae
+>>>>>>> 22aaec47541840dbacfceae7dc4152489de27b29
 ?>
 
 

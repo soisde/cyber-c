@@ -10,7 +10,15 @@ $ListaSolucoes = $ListaSolucoes->ListarSolucoes();
 <div>
 
 
+<<<<<<< HEAD
     <td><a class="button" href="index.php?p=solucoes&s=inserir">INSERIR</a></td>
+=======
+<<<<<<< HEAD
+    <td><a class="button" href="index.php?p=solucoes&s=inserir">INSERIR</a></td>
+=======
+    <td><a class="button" href="index.php?p=S$solucoes&e=inserir">INSERIR</a></td>
+>>>>>>> 539a96932d4ccd59691abb140a3082b48f69d7ae
+>>>>>>> 22aaec47541840dbacfceae7dc4152489de27b29
 
     <table>
         <thead>

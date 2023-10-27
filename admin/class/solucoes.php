@@ -44,7 +44,15 @@ class SolucoesClass
 
         $conn = Conexao::LigarConexao();
         $conn->exec($query);
+<<<<<<< HEAD
         echo "<script>document.location='index.php?p=solucoes'</script>";
+=======
+<<<<<<< HEAD
+        echo "<script>document.location='index.php?p=solucoes'</script>";
+=======
+        echo "<script>document.location='index.php?p=Solucoes'</script>";
+>>>>>>> 539a96932d4ccd59691abb140a3082b48f69d7ae
+>>>>>>> 22aaec47541840dbacfceae7dc4152489de27b29
     }
 
     public function Carregar(){
@@ -74,18 +82,42 @@ public function Atualizar(){
             $conn = Conexao::LigarConexao();
             $conn->exec($query);
 
+<<<<<<< HEAD
             echo "<script>document.location='index.php?p=solucoes'</script>";
+=======
+<<<<<<< HEAD
+            echo "<script>document.location='index.php?p=solucoes'</script>";
+=======
+            echo "<script>document.location='index.php?p=Solucoes'</script>";
+>>>>>>> 539a96932d4ccd59691abb140a3082b48f69d7ae
+>>>>>>> 22aaec47541840dbacfceae7dc4152489de27b29
 
 }
 
 public function Desativar(){
+<<<<<<< HEAD
     $query = "UPDATE tblsolucoes SET 
+=======
+<<<<<<< HEAD
+    $query = "UPDATE tblsolucoes SET 
+=======
+    $query = "UPDATE tblsplucoes SET 
+>>>>>>> 539a96932d4ccd59691abb140a3082b48f69d7ae
+>>>>>>> 22aaec47541840dbacfceae7dc4152489de27b29
     statusSolucoes  = 'DESATIVADO'
     WHERE idSolucoes = ". $this->idSolucoes;
 
      $conn = Conexao::LigarConexao();
      $conn->exec($query);
+<<<<<<< HEAD
      echo "<script>document.location='index.php?p=solucoes'</script>";
+=======
+<<<<<<< HEAD
+     echo "<script>document.location='index.php?p=solucoes'</script>";
+=======
+     echo "<script>document.location='index.php?p=Solucoes'</script>";
+>>>>>>> 539a96932d4ccd59691abb140a3082b48f69d7ae
+>>>>>>> 22aaec47541840dbacfceae7dc4152489de27b29
 
 }
 }
