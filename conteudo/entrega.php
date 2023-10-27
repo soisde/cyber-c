@@ -6,7 +6,7 @@
 
         <div class="txtEntrega" >
         <h2><i class="fa-solid fa-list-check" style="color:  #000000;"></i> A entrega</h2>
-          <?php foreach ($listar as $linha) : ?>
+          <?php foreach ($listaEntrega as $linha) : ?>
 
           <h3><?php echo $linha['subTituloEntrega'] ?></h3>
           <p><?php echo $linha['textoEntrega'] ?></p>

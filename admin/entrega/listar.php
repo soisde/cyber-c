@@ -1,8 +1,8 @@
 <?php
 require_once('class/entrega.php');
 
-$listaEntrega = new EntregaClass();
-$lista = $listaEntrega->ListarEntraga();
+$ListaEntrega = new EntregaClass();
+$listaEntrega = $ListaEntrega->ListarEntraga();
 ?>
 
 
@@ -16,8 +16,7 @@ $lista = $listaEntrega->ListarEntraga();
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Foto</th>
-                <th>Titulo</th>
+                <th>Sub-Titulo</th>
                 <th>Texto</th>
                 <th>Status</th>
                 <th>ATUALIZAR</th>
@@ -28,12 +27,11 @@ $lista = $listaEntrega->ListarEntraga();
 
         <tbody>
 
-            <?php foreach ($lista as $linha) : ?>
+            <?php foreach ($listaEntrega as $linha) : ?>
 
                 <tr>
                     <td><?php echo $linha['idEntrega'] ?></td>
-                    <td><?php echo '<img src="../img/' . $linha['imgEntrega'] . '"alt="' . $linha['descricaoImgEntrega'] . '">'?></td>  
-                    <td><?php echo $linha['tituloEntrega'] ?></td>
+                    <td><?php echo $linha['subTituloEntrega'] ?></td>
                     <td><?php echo $linha['textoEntrega'] ?></td>
                     <td><?php echo $linha['statusEntrega'] ?></td>
                     <td><a href="index.php?p=entrega&e=atualizar&id=<?php echo $linha['idEntrega']?>" class="atualizar">ATUALIZAR</a></td>

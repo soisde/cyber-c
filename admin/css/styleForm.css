@@ -1,8 +1,8 @@
 .section{
-    box-shadow: 10px 10px 30px #ea10bb;
+    box-shadow: 10px 10px 30px #800eb6 ;
     padding: 40px 10px;
     border-radius: 20px;
-    border: solid 4px #ea10bb;
+    border: solid 4px #800eb6;
     height: 90vh;
 }
 
@@ -15,7 +15,7 @@
 
 .section span{
     display: flex;
-    background: #ea10bb;
+    background: #800eb6;
     width: 90%;
     height: 2px;
     margin: 10px 5%;
@@ -27,7 +27,7 @@
     justify-content: space-around;
 }
 
-.img{
+/*.img{
     width: 45%;
     text-align: start;
     display: flex;
@@ -53,18 +53,18 @@
     color: black ;
     background-color: #ecebeb;
     margin-top: 57px;
-}
+}*/
 
 .btn{
     width:50%; 
     margin: 20px 25%; 
     height:70px !important;
-    color: #ea10bb;
-    border: solid 2px #ea10bb !important; 
+    color: #800eb6;
+    border: solid 2px #800eb6 !important; 
 }
 
 .btn:hover{
-    background-color: #ea10bb;
+    background-color: #800eb6;
     color: #ecebeb;
     transition: ease-in-out .5s;
 }

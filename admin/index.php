@@ -1,3 +1,18 @@
+<?php 
+
+session_start();
+
+if(!isset($_SESSION['login'])) {
+header('Location:login.php');
+}
+require_once('class/login.php');
+
+$usuario = new Login();
+$usuario->idUsuario = $_SESSION['idUsuario'];
+$dadosUsuario = $usuario->VerificarLogin();
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,10 +34,12 @@
     <section class="dash">
 
         <nav>
-
-            <img src="img/logodash.svg" alt="">
-
+    
+            <img  src="img/logodash.svg" alt="">
+    
             <ul>
+                <li><a href="index.php?p=dashbord">DashBord</a></li>
+                <hr>
                 <li><a href="index.php?p=metodo">Metodologia</a></li>
                 <hr>
                 <li><a href="index.php?p=solucoes">Soluções</a></li>
@@ -33,6 +50,9 @@
                 <hr>
                 <li><a href="index.php?p=faq">FAQ</a></li>
                 <hr>
+                <li><a href="index.php?p=usuario">Usuario</a></li>
+                <hr>
+
             </ul>
 
         </nav>
@@ -42,8 +62,8 @@
 
             <div class="header">
                 
-                <img src="img/avatardash.svg" alt="">
-                <h3>Usuário</h3>
+            <img style="width:3%;"src="../img/<?php echo $dadosUsuario['fotoUsuario'];?>">
+                <h3><?php echo $dadosUsuario['nomeUsuario']; ?></h3>
 
             </div>
 
@@ -63,8 +83,12 @@
                 //         require_once('planilha/servico.php');
                 //     }
                 // }
-    
+
                 switch ($pagina) {
+                    case 'deshbord':
+                        require_once('dashbord/dashbord.php');
+                        break;
+
                         case 'metodo':
                           require_once('metodo/metodo.php');
                           break;
@@ -84,9 +108,14 @@
                                 case 'faq':
                                   require_once('faq/faq.php');
                                   break;
+
+                                  case 'usuario':
+                                    require_once('usuario/usuario.php');
+                                    break;
                     
                     default:
-                        # code...
+                    require_once('dashbord/dashbord.php');
+    
                         break;
                 }
     
